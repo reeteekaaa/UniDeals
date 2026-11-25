@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | UniDeals LPU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>UniDeals LPU</h1>
+                <p>Official Student Digital Coupons & Discount Aggregator</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html" class="active">Cart (<span id="cartNavCount">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="login.html">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">My Saved Coupons (Cart)</h2>
+        <p class="page-sub">Review your saved discount codes before proceeding to checkout and redemption.</p>
+
+        <div class="box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h3>Total Coupons Saved: <span id="totalSaved" style="color: #1e3a8a;">0</span></h3>
+                <a href="checkout.html" class="btn btn-green">Proceed to Checkout &rarr;</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Store</th>
+                        <th>Code</th>
+                        <th>Discount</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                    <!-- Populated by app.js -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lovely Professional University (LPU) | UniDeals Campus Savings Portal</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

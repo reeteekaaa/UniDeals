@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login & Sign Up | UniDeals LPU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>UniDeals LPU</h1>
+                <p>Official Student Digital Coupons & Discount Aggregator</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Cart (<span id="cartNavCount">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="login.html" class="active">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Student Portal Authentication</h2>
+        <p class="page-sub">Access your campus account to save deals, track orders, and redeem vouchers.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <!-- Login Box -->
+            <div class="box">
+                <h2>Student Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Student Email ID *</label>
+                        <input type="email" id="loginEmail" placeholder="e.g. student@lpu.in" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password *</label>
+                        <input type="password" id="loginPass" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-green">Login to Portal</button>
+                    <p id="loginStatus" style="font-size: 13px; margin-top: 10px;"></p>
+                </form>
+            </div>
+
+            <!-- Sign Up Box -->
+            <div class="box">
+                <h2>New Student Registration</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="signName" placeholder="e.g. Siddharth Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label>LPU Reg. Number *</label>
+                        <input type="text" id="signReg" placeholder="e.g. 12401234" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Student Email *</label>
+                        <input type="email" id="signEmail" placeholder="e.g. student@lpu.in" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Create Password *</label>
+                        <input type="password" id="signPass" placeholder="Minimum 6 characters" minlength="6" required>
+                    </div>
+                    <button type="submit" class="btn">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lovely Professional University (LPU) | UniDeals Campus Savings Portal</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

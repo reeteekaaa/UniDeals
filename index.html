@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | UniDeals Coupons Aggregator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Menu Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>UniDeals LPU</h1>
+                <p>Official Student Digital Coupons & Discount Aggregator</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="cart.html">Cart (<span id="cartNavCount">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="login.html">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Explore Campus & Online Deals</h2>
+        <p class="page-sub">Verified student discount codes curated for Lovely Professional University.</p>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchCoupons()" placeholder="Search by store name or promo code...">
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-pills">
+            <button class="btn btn-cat active" onclick="filterCat('all', this)">All Deals</button>
+            <button class="btn btn-cat" onclick="filterCat('food', this)">Food</button>
+            <button class="btn btn-cat" onclick="filterCat('books', this)">Books</button>
+            <button class="btn btn-cat" onclick="filterCat('tech', this)">Tech</button>
+        </div>
+
+        <!-- Catalogue Cards Grid -->
+        <div id="couponList" class="coupon-grid">
+            <!-- Dynamic Coupon Cards Injected via app.js -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lovely Professional University (LPU) | UniDeals Campus Savings Portal</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

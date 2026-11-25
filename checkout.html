@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout & Voucher Redemption | UniDeals LPU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>UniDeals LPU</h1>
+                <p>Official Student Digital Coupons & Discount Aggregator</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Cart (<span id="cartNavCount">0</span>)</a></li>
+                    <li><a href="checkout.html" class="active">Checkout</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="login.html">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Checkout & Claim Redemption Voucher</h2>
+        <p class="page-sub">Enter your student credentials to generate an official LPU student discount voucher.</p>
+
+        <div class="box">
+            <h2>Student Redemption Form</h2>
+            <form id="checkoutForm">
+                <div class="form-row">
+                    <input type="text" id="studentName" placeholder="Full Student Name" required>
+                    <input type="text" id="studentReg" placeholder="LPU Registration Number (e.g. 12401234)" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="selectedStore" placeholder="Store Name (e.g. Domino's Pizza)" required>
+                    <input type="text" id="selectedCode" placeholder="Promo Code (e.g. LPU50)" required>
+                </div>
+                <button type="submit" class="btn btn-green">Generate Redemption Voucher</button>
+            </form>
+
+            <!-- Voucher Slip Generated on Submit -->
+            <div id="voucherSlip" class="voucher-slip" style="display: none;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lovely Professional University (LPU) | UniDeals Campus Savings Portal</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

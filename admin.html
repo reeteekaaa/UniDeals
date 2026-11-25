@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | UniDeals LPU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>UniDeals LPU</h1>
+                <p>Official Student Digital Coupons & Discount Aggregator</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Cart (<span id="cartNavCount">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="admin.html" class="active">Admin</a></li>
+                    <li><a href="login.html">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Administrator Control Panel (CRUD)</h2>
+        <p class="page-sub">Add new discount codes to the live catalogue or delete expired offers.</p>
+
+        <!-- Add Coupon Form -->
+        <div class="box">
+            <h2>Add New Coupon to Catalogue</h2>
+            <form id="addCouponForm">
+                <div class="form-row">
+                    <input type="text" id="storeName" placeholder="Store Name (e.g. Domino's)" required>
+                    <input type="text" id="couponCode" placeholder="Promo Code (e.g. LPU50)" required>
+                    <input type="text" id="discountVal" placeholder="Discount (e.g. 50% OFF)" required>
+                    <select id="categorySelect" required>
+                        <option value="food">Food</option>
+                        <option value="books">Books</option>
+                        <option value="tech">Tech</option>
+                    </select>
+                    <input type="text" id="minSpend" placeholder="Min. Spend (e.g. ₹299)">
+                </div>
+                <button type="submit" class="btn btn-green">Add Coupon</button>
+            </form>
+        </div>
+
+        <!-- Inventory Table with Delete -->
+        <div class="box">
+            <h2>Manage Live Coupon Inventory</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Store</th>
+                        <th>Code</th>
+                        <th>Discount</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="adminTableBody">
+                    <!-- Populated by app.js -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lovely Professional University (LPU) | UniDeals Campus Savings Portal</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
